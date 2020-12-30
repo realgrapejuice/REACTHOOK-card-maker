@@ -8,8 +8,7 @@ class AuthService {
 
   logInMail(userMail, userPW) {
     firebaseAuth //
-      .signInWithEmailAndPassword(userMail, userPW)
-      .then(console.log);
+      .signInWithEmailAndPassword(userMail, userPW);
   }
 
   createAccount(userMail, userPW) {

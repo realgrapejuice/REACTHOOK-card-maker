@@ -1,12 +1,21 @@
 import React, { useRef, useState } from "react";
 import styles from "./log-in.module.css";
 import SignUp from "../sign_up/signUp";
+import { useHistory } from "react-router-dom";
 
 const LogIn = ({ authService }) => {
+  const history = useHistory();
   const [signUpStatus, setSignUpStatus] = useState(false);
 
   const mailRef = useRef();
   const passwordRef = useRef();
+
+  const goToMain = (userId) => {
+    history.push({
+      pathname: "/main",
+      state: { id: userId },
+    });
+  };
 
   const loginOutlinkEventHandler = (event) => {
     event.preventDefault();
@@ -24,7 +33,7 @@ const LogIn = ({ authService }) => {
     provider = provider.charAt(0).toUpperCase() + provider.slice(1);
     authService //
       .logInOutlink(provider)
-      .then(console.log);
+      .then((result) => goToMain(result.user.uid));
   };
 
   const loginMailEventHandler = (event) => {
@@ -32,7 +41,8 @@ const LogIn = ({ authService }) => {
     const mail = mailRef.current.value;
     const password = passwordRef.current.value;
     authService //
-      .logInMail(mail, password);
+      .logInMail(mail, password)
+      .then((result) => goToMain(result.user.uid));
     mailRef.current.value = "";
     passwordRef.current.value = "";
   };
