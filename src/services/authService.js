@@ -1,9 +1,26 @@
 import { firebaseAuth, googleProvider, githubProvider } from "./reset_firebase";
 
 class AuthService {
-  logIn(providerName) {
+  logInOutlink(providerName) {
     const authProvider = this.getAuthProvider(providerName);
     return firebaseAuth.signInWithPopup(authProvider);
+  }
+
+  logInMail(userMail, userPW) {
+    firebaseAuth //
+      .signInWithEmailAndPassword(userMail, userPW)
+      .then(console.log);
+  }
+
+  createAccount(userMail, userPW) {
+    const user = userMail.split("@")[0];
+    firebaseAuth //
+      .createUserWithEmailAndPassword(userMail, userPW)
+      .then(window.alert(`Account created successfully ${user}`));
+  }
+
+  logOut() {
+    firebaseAuth.signOut();
   }
 
   getAuthProvider(providerName) {
