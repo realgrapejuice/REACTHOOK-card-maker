@@ -7,7 +7,7 @@ class AuthService {
   }
 
   logInMail(userMail, userPW) {
-    firebaseAuth //
+    return firebaseAuth //
       .signInWithEmailAndPassword(userMail, userPW);
   }
 
