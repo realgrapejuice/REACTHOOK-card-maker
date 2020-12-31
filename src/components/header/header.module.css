@@ -1,0 +1,84 @@
+.container {
+  width: 100%;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e1b12c;
+  position: relative;
+}
+
+.logoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  color: #192a56;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.title {
+  color: #192a56;
+  letter-spacing: -0.05em;
+}
+
+.signOut {
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #f5f6fa;
+  background-color: #4cd137;
+  letter-spacing: -0.05em;
+  cursor: pointer;
+  transition: opacity 150ms ease-in;
+}
+
+.signOut:hover {
+  opacity: 0.8;
+}
+
+.ul {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  bottom: -70px;
+}
+
+.ul > li > button {
+  padding: 0.5rem 0.5rem 2rem 0.5rem;
+  width: 60px;
+  height: 70px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: -0.05em;
+  background-color: #dcdde1;
+  position: relative;
+  cursor: pointer;
+}
+
+.ul > li > button::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid white;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+
+.editor {
+  margin-right: 20px;
+}
+
+.true {
+  border-top: 10px solid #00a8ff;
+}
+
+.false {
+  border-top: 10px solid #2f3640;
+}

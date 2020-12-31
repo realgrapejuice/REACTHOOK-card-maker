@@ -58,11 +58,11 @@ const LogIn = ({ authService }) => {
   return (
     <section className={styles.container}>
       <div className={styles.logIn}>
-        <header>
+        <header className={styles.header}>
           <h1>Business Card Maker</h1>
           <span>Easiest way to save business card</span>
         </header>
-        <form onSubmit={loginMailEventHandler}>
+        <form className={styles.form} onSubmit={loginMailEventHandler}>
           <input type="text" placeholder="E-mail" ref={mailRef} required />
           <input
             type="password"
@@ -83,7 +83,7 @@ const LogIn = ({ authService }) => {
             </button>
           </div>
         </form>
-        <ul>
+        <ul className={styles.ul}>
           <li
             className={`${styles.linkBtn} google`}
             onClick={loginOutlinkEventHandler}

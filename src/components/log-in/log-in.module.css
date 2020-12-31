@@ -19,7 +19,7 @@
   box-shadow: 20px 20px 60px #d0d1d5, -20px -20px 60px #ffffff;
 }
 
-header {
+.header {
   width: 100%;
   padding: 2rem 0;
   text-align: center;
@@ -30,18 +30,18 @@ header {
   margin-bottom: 2rem;
 }
 
-header h1 {
+.header h1 {
   letter-spacing: 0.13em;
 }
 
-header span {
+.header span {
   letter-spacing: 0.02em;
   color: #f5f6fa;
   font-weight: 600;
   font-size: 1.1em;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +51,7 @@ form {
   margin: 2rem 0;
 }
 
-form input {
+.form input {
   width: 350px;
   padding: 1.5rem 1.5rem 1rem 1.5rem;
   margin-bottom: 1rem;
@@ -59,17 +59,17 @@ form input {
   font-size: 1rem;
 }
 
-form input:last-of-type {
+.form input:last-of-type {
   margin-bottom: 2rem;
 }
 
-form .buttonBox {
+.form .buttonBox {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-form .buttonBox button {
+.form .buttonBox button {
   padding: 0.8rem;
   border-radius: 6px;
   font-weight: 600;
@@ -78,7 +78,7 @@ form .buttonBox button {
   cursor: pointer;
 }
 
-form .buttonBox button:hover {
+.form .buttonBox button:hover {
   opacity: 0.8;
 }
 
@@ -91,7 +91,7 @@ form .buttonBox button:hover {
   background-color: #44bd32;
 }
 
-ul {
+.ul {
   display: flex;
 }
 
