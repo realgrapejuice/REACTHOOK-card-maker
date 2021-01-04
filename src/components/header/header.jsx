@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./header.module.css";
 
-const Header = ({ authService }) => {
-  const [editorStatus, setEditorStatus] = useState(false);
-  const [viewerStatus, setViewerStatus] = useState(true);
+const Header = ({
+  authService,
+  editorStatus,
+  viewerStatus,
+  setEditorStatus,
+  setViewerStatus,
+}) => {
+  const history = useHistory();
+
+  const [userId, setUserId] = useState(history && history.id);
 
   const setEditorStyle = editorStatus
     ? `${styles.editor} ${styles.true}`
@@ -26,6 +34,16 @@ const Header = ({ authService }) => {
   const handleSignOut = () => {
     authService.logOut();
   };
+
+  useEffect(() => {
+    authService.onAuthChange((user) => {
+      if (user) {
+        setUserId(user.uid);
+      } else {
+        history.push("/");
+      }
+    });
+  }, [authService, history]);
 
   return (
     <header className={styles.container}>

@@ -22,6 +22,12 @@ class AuthService {
     firebaseAuth.signOut();
   }
 
+  onAuthChange(onUserChanged) {
+    firebaseAuth.onAuthStateChanged((user) => {
+      onUserChanged(user);
+    });
+  }
+
   getAuthProvider(providerName) {
     switch (providerName) {
       case "Google":
