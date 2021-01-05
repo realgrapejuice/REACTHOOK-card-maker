@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.title {
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.05em;
+  color: #2f3640;
+}
+
+.formBox {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem;
+}

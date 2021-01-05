@@ -7,7 +7,7 @@ import styles from "./main.module.css";
 const Main = ({ authService }) => {
   const [editorStatus, setEditorStatus] = useState(false);
   const [viewerStatus, setViewerStatus] = useState(true);
-  const [cards, setCards] = useState([
+  const [userData, setUserData] = useState([
     {
       id: 1,
       theme: "dark",
@@ -39,6 +39,14 @@ const Main = ({ authService }) => {
       mail: "poll4t@hanmail.net",
     },
   ]);
+  const createAndUpdate = (userData) => {
+    setUserData((cards) => {
+      const updated = { ...cards };
+      updated[userData.id] = userData;
+      return updated;
+    });
+  };
+
   return (
     <section className={styles.container}>
       <Header
@@ -48,8 +56,14 @@ const Main = ({ authService }) => {
         setEditorStatus={setEditorStatus}
         setViewerStatus={setViewerStatus}
       />
-      {editorStatus && <Editor cards={cards} />}
-      {viewerStatus && <Viewer cards={cards} />}
+      {editorStatus && (
+        <Editor
+          userData={userData}
+          addCard={createAndUpdate}
+          updateCard={createAndUpdate}
+        />
+      )}
+      {viewerStatus && <Viewer userData={userData} />}
     </section>
   );
 };
