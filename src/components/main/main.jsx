@@ -10,7 +10,8 @@ const Main = ({ authService }) => {
   const [cards, setCards] = useState([
     {
       id: 1,
-      firstName: "Seung Hoon",
+      theme: "dark",
+      firstName: "SeungHoon",
       lastName: "HAN",
       company: "Kakaobank",
       position: "Frontend Developer",
@@ -19,6 +20,17 @@ const Main = ({ authService }) => {
     },
     {
       id: 2,
+      theme: "light",
+      firstName: "Haejin",
+      lastName: "PARK",
+      company: "Syneos health",
+      position: "Lv2",
+      phone: "01065668874",
+      mail: "poll4t@hanmail.net",
+    },
+    {
+      id: 3,
+      theme: "light",
       firstName: "Haejin",
       lastName: "PARK",
       company: "Syneos health",

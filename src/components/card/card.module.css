@@ -1,0 +1,61 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  height: 240px;
+  position: relative;
+  padding: 1.5rem;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+}
+
+.dark {
+  background-color: #353b48;
+  color: #f5f6fa;
+  border-radius: 25px;
+  background: #353b48;
+  box-shadow: 5px 5px 10px #303541, -5px -5px 5px #3a414f;
+}
+
+.light {
+  background-color: #f5f6fa;
+  color: #353b48;
+  border-radius: 25px;
+  box-shadow: 5px 5px 40px #d0d1d5, -5px 5px 40px #ffffff;
+}
+
+.profile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+.firstName {
+  margin-right: 0.5rem;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.info > .icon {
+  margin-right: 0.5rem;
+}

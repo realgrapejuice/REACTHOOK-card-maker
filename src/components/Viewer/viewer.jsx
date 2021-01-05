@@ -5,8 +5,8 @@ import styles from "./viewer.module.css";
 const Viewer = ({ cards }) => {
   return (
     <section className={styles.container}>
-      <h1>Viewer</h1>
-      <ul>
+      <h1 className={styles.title}>Viewer</h1>
+      <ul className={styles.cardBox}>
         {cards.map((card) => (
           <Card card={card} key={card.id} />
         ))}
