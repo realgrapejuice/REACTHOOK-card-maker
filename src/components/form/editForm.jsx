@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./editForm.module.css";
 
-const EditForm = ({ updateCard }) => {
-  console.log(updateCard);
+const EditForm = ({ card, addCard }) => {
+  console.log(card);
+  console.log(addCard);
   return <h1>Hello</h1>;
 };
 

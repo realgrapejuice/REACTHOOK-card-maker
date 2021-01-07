@@ -39,11 +39,12 @@ const Main = ({ authService }) => {
       mail: "poll4t@hanmail.net",
     },
   ]);
-  const createAndUpdate = (userData) => {
-    setUserData((cards) => {
-      const updated = { ...cards };
-      updated[userData.id] = userData;
-      return updated;
+
+  const addCard = (newData) => {
+    setUserData((prevData) => {
+      const cards = { ...prevData };
+      cards[newData.id] = newData;
+      return cards;
     });
   };
 
@@ -56,13 +57,7 @@ const Main = ({ authService }) => {
         setEditorStatus={setEditorStatus}
         setViewerStatus={setViewerStatus}
       />
-      {editorStatus && (
-        <Editor
-          userData={userData}
-          addCard={createAndUpdate}
-          updateCard={createAndUpdate}
-        />
-      )}
+      {editorStatus && <Editor userData={userData} addCard={addCard} />}
       {viewerStatus && <Viewer userData={userData} />}
     </section>
   );
