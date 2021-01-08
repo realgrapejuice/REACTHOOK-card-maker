@@ -1,0 +1,42 @@
+.form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #2f3640;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+.rowFirst,
+.rowSecond,
+.rowThird,
+.rowFourth {
+  display: flex;
+}
+
+.form select,
+.form input {
+  width: 50%;
+  padding: 1rem;
+  border-bottom: 1px solid #2f3640;
+}
+
+.rowFirst > select,
+.rowSecond > input:first-of-type,
+.rowThird > input:first-of-type {
+  border-right: 1px solid #2f3640;
+}
+
+.rowFourth > button {
+  width: 100%;
+  padding: 1rem;
+  font-weight: 600;
+  color: #f5f6fa;
+  background-color: #273c75;
+  transition: opacity 150ms ease-in;
+  cursor: pointer;
+}
+
+.rowFourth > button:hover {
+  opacity: 0.9;
+}

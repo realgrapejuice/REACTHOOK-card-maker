@@ -32,3 +32,8 @@ input {
   background-color: transparent;
   font-family: "Poppins", sans-serif;
 }
+
+select {
+  border: none;
+  outline: none;
+}

@@ -7,8 +7,8 @@ const Viewer = ({ userData }) => {
     <section className={styles.container}>
       <h1 className={styles.title}>Viewer</h1>
       <ul className={styles.cardBox}>
-        {userData.map((card) => (
-          <Card card={card} key={card.id} />
+        {Object.keys(userData).map((key) => (
+          <Card key={key} card={userData[key]} />
         ))}
       </ul>
     </section>

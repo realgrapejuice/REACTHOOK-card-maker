@@ -38,12 +38,6 @@
   font-weight: 500;
   letter-spacing: -0.05em;
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-}
-
-.firstName {
-  margin-right: 0.5rem;
 }
 
 .infoBox {

@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../card/card";
 import AddForm from "../form/addForm";
 import EditForm from "../form/editForm";
 import styles from "./editor.module.css";
@@ -8,12 +9,12 @@ const Editor = ({ userData, addCard }) => {
   return (
     <section className={styles.container}>
       <h1 className={styles.title}>Editor</h1>
-      {/* <ul className={styles.formBox}>
-        {userData.map((card) => (
-          <EditForm key={card.id} card={card} />
+      <main className={styles.formBox}>
+        {Object.keys(userData).map((key) => (
+          <EditForm key={key} card={userData[key]} />
         ))}
-      </ul> */}
-      <AddForm addCard={addCard} />
+        <AddForm addCard={addCard} />
+      </main>
     </section>
   );
 };

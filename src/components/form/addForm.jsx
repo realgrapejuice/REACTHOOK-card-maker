@@ -21,6 +21,7 @@ const AddForm = ({ addCard }) => {
       mail: mailRef.current.value || "",
       phone: phoneRef.current.value || "",
     };
+    formRef.current.reset();
     addCard(card);
   };
 
@@ -72,9 +73,11 @@ const AddForm = ({ addCard }) => {
           placeholder="Phone"
         />
       </div>
-      <button type="submit" className={styles.button}>
-        Add
-      </button>
+      <div className={styles.rowFourth}>
+        <button type="submit" className={styles.button}>
+          Add
+        </button>
+      </div>
     </form>
   );
 };

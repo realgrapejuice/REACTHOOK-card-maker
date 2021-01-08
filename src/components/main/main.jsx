@@ -11,8 +11,7 @@ const Main = ({ authService }) => {
     {
       id: 1,
       theme: "dark",
-      firstName: "SeungHoon",
-      lastName: "HAN",
+      name: "SeungHoon",
       company: "Kakaobank",
       position: "Frontend Developer",
       phone: "01050914397",
@@ -21,8 +20,7 @@ const Main = ({ authService }) => {
     {
       id: 2,
       theme: "light",
-      firstName: "Haejin",
-      lastName: "PARK",
+      name: "Haejin",
       company: "Syneos health",
       position: "Lv2",
       phone: "01065668874",
@@ -31,8 +29,7 @@ const Main = ({ authService }) => {
     {
       id: 3,
       theme: "light",
-      firstName: "Haejin",
-      lastName: "PARK",
+      name: "Haejin",
       company: "Syneos health",
       position: "Lv2",
       phone: "01065668874",
@@ -43,7 +40,7 @@ const Main = ({ authService }) => {
   const addCard = (newData) => {
     setUserData((prevData) => {
       const cards = { ...prevData };
-      cards[newData.id] = newData;
+      cards[newData.id] = newData; // cards객체에 newData.id라는 이름으로 newData를 생성
       return cards;
     });
   };
