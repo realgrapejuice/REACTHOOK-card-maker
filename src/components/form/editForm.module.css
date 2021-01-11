@@ -5,6 +5,8 @@
   border: 2px solid #2f3640;
   border-radius: 6px;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 100;
 }
 
 .rowFirst,
@@ -39,4 +41,76 @@
 
 .rowFourth > button:hover {
   opacity: 0.9;
+}
+
+.deleteBtn {
+  font-size: 1.2rem;
+  color: #e84118;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  z-index: 200;
+  cursor: pointer;
+}
+
+.messageBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  z-index: 200;
+  color: #2f3640;
+  border-radius: 12px;
+  background: #f5f6fa;
+}
+
+.messageBox > p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.messageBox > span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.btnBox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.btnBox button {
+  height: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 150ms ease-in;
+}
+
+.btnBox button:hover {
+  transform: scale(1.2);
+}
+
+.yesBtn {
+  color: #4cd137;
+  margin-right: 4rem;
+}
+
+.noBtn {
+  color: #e84118;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: visible;
 }
